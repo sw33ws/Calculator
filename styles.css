@@ -4,14 +4,34 @@
     --calculator-item-color: white;
     --calculator-item-background-hover: grey;
     --calculator-item-color-hover: black;
+    --sun: hidden;
+    --moon: visible;
 }
 
 .lightmode {
-    --background-color: grey;
+    --background-color: rgb(200, 200, 200);
     --calculator-item-background: white;
     --calculator-item-color: black;
     --calculator-item-background-hover: rgb(20, 20, 20);
     --calculator-item-color-hover: white;
+    --sun: visible;
+    --moon: hidden;
+}
+
+.moon {
+    position: absolute;
+    color: white;
+    top: 0;
+    left: 0;
+    visibility: var(--moon);
+}
+
+.sun {
+    position: absolute;
+    color: black;
+    top: 0;
+    left: 0;
+    visibility: var(--sun);
 }
 
 body {
@@ -77,4 +97,11 @@ body {
 
 #equal {
     background-color: brown;
+}
+
+#sun-moon {
+    position: relative;
+    background-color: var(--background-color);
+    border: none;
+    font-size: 5rem;
 }
