@@ -1,0 +1,80 @@
+:root {
+    --background-color: rgb(40, 40, 40);
+    --calculator-item-background: rgb(20, 20, 20);
+    --calculator-item-color: white;
+    --calculator-item-background-hover: grey;
+    --calculator-item-color-hover: black;
+}
+
+.lightmode {
+    --background-color: grey;
+    --calculator-item-background: white;
+    --calculator-item-color: black;
+    --calculator-item-background-hover: rgb(20, 20, 20);
+    --calculator-item-color-hover: white;
+}
+
+body {
+    background-color: var(--background-color);
+    height: 100vh;  
+    margin: 0px;
+    overflow: hidden;
+}
+
+.calculator {
+    position: absolute;
+    top: 50%;  
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.calculator-display {
+    position: relative;
+    display: flex;
+    height: 5rem;
+    width: 20rem;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2rem;
+    color: var(--calculator-item-color);
+    background-color: var(--calculator-item-background);
+    border: solid black
+}
+
+.calculator-grid {
+    display: grid;
+    grid-template-columns: 5rem 5rem 5rem 5rem;
+    grid-template-rows: 5rem 5rem 5rem 5rem;
+}
+
+.calculator-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+    width: 5rem;
+
+    font-size: 2rem;
+    color: var(--calculator-item-color);
+    background-color: var(--calculator-item-background);
+    border: solid black;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+    supported by Chrome, Edge, Opera and Firefox */
+}
+
+.calculator-item:hover {
+    background-color: var(--calculator-item-background-hover);
+    transition: 0.5s ease-in-out;
+    color: var(--calculator-item-color-hover);
+}
+
+#equal {
+    background-color: brown;
+}
